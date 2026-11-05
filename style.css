@@ -1,47 +1,100 @@
 body{
+	margin:0;
+}
+
+#menuButton{
+	position: fixed;
+	left: 2vw;
+	font-size: 5em;
+	color: #444;
+	text-decoration: none;
+	margin: 0;
+	transition: 0.2s;
+}
+
+#menuButton:hover{
+	rotate: 3deg;
+	color: black;
+}
+
+#indexBody{
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+#acuteHeader{
+	display: flex;
+	justify-content: center;
+}
+
+#acuteTitle{
+	width: 70vw;
+	margin-top: 10vh;
+	margin-bottom: 0;
+	font-size: 16vw;
 	font-family: sans-serif;
-	margin:0;
+	font-weight: lighter;
+	transition: 0.2s;
 }
 
-header{
-	box-sizing: border-box;
-	position: sticky;
-	height: 8vh;
-	width: 100vw;
-	top: 0%;
-	left: 0%;
-	background-color: skyblue;
-
-	border: 1px solid black;
+#acuteTitle:hover{
+	text-shadow: 2px 2px black;
 }
 
-h1{
+#navList{
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	list-style: none;
+	padding: 0;
 	text-align: center;
+	align-items: center;
 }
 
-aside{
-	box-sizing: border-box;
-	background-color: lightgray;
-	z-index: 1;
-	padding: 10px;
-	border: 1px solid black;
-	border-top: none;
-}
-
-main{
-	display: grid;
-	grid-template-columns: 15vw 1fr;
-	min-height: 92vh;
-}
-
-section{
-	margin: 20px;
-}
-
-p{
-	margin:0;
+#navList li{
+	width: 55vw;
+	margin-bottom: 5vh;
 }
 
 .navLink{
-	color: black;
+	text-decoration: none;
+	font-family: sans-serif;
+	color: #444;
+	font-weight: lighter;
+	transition: 0.2s;
+	font-size: 8vw;
 }
+
+.navLink:hover{
+	color: black;
+	text-shadow: 1px 1px black;}
+
+/*#nav1{top: 75vh; left: 20vw}
+#nav2{top: 35vh; left: 72vw}
+#nav3{top: 55vh; left: 48vw}*/
+
+#accountCategories{
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 100vh;
+}
+
+.accountCategoryLink{
+	text-align: center;
+	text-decoration: none;
+	font-family: sans-serif;
+	color: #444;
+	font-weight: lighter;
+	transition: 0.2s;
+	font-size: 8vw;
+	width: fit-content;
+	align-self: center;
+}
+
+.accountCategoryLink:hover{
+	color: black;
+	text-shadow: 1px 1px black;}
