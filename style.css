@@ -3,9 +3,11 @@ body{
 }
 
 h1{font-family: sans-serif; font-weight: lighter;}
-h2{font-family: sans-serif; font-weight: lighter;}
-p{font-family: sans-serif; font-weight: lighter;}
+h2{font-family: sans-serif; font-weight: lighter; font-size: 2.5vw}
+p{font-family: sans-serif; font-weight: lighter; font-size: 1.5vw}
 a{font-family: sans-serif; font-weight: lighter;}
+li{font-family: sans-serif; font-weight: lighter; font-size: 1.4vw; text-align: left !important; list-style: circle;}
+hr{width: 40%}
 
 #menuButton{
 	position: fixed;
@@ -26,7 +28,8 @@ a{font-family: sans-serif; font-weight: lighter;}
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: center;
+	align-items: center;
 }
 
 .contentHeader{
@@ -37,20 +40,33 @@ a{font-family: sans-serif; font-weight: lighter;}
 .contentTitle{
 	width: 70vw;
 	margin-top: 6vh;
-	margin-bottom: 0;
+	margin-bottom: 20px;
 	transition: 0.2s;
 	text-align: center;
 	color: #231f20;
 	font-size: 6vw
 }
-#acuteTitle{font-size: 16vw;}
+#acuteTitle{font-size: 16vw; margin-bottom: 5vh; margin-top:0;}
 #acuteTitle:hover{text-shadow: 2px 2px #231f20;}
-
 #meTitle{font-size: 6vw}
 
-#navList{
+.contentMain{
 	display: flex;
 	flex-direction: column;
+	width: 100vw;
+	transition: 0.2s;
+	align-items: center;
+}
+
+.contentSection{
+	width: 55vw;
+	text-align: center;
+}
+
+#navList{
+	display: grid;
+	row-gap: 5vw;
+	grid-template-columns: 35vw 35vw;
 	margin: 0;
 	list-style: none;
 	padding: 0;
@@ -59,8 +75,8 @@ a{font-family: sans-serif; font-weight: lighter;}
 }
 
 #navList li{
-	width: 55vw;
-	margin-bottom: 5vh;
+	list-style: none;
+	text-align: center !important; 
 }
 
 .navLink{
@@ -68,7 +84,7 @@ a{font-family: sans-serif; font-weight: lighter;}
 	font-family: sans-serif;
 	color: #444;
 	transition: 0.2s;
-	font-size: 8vw;
+	font-size: 6vw;
 }
 
 .navLink:hover{
