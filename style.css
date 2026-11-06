@@ -14,7 +14,7 @@ body{
 
 #menuButton:hover{
 	rotate: 3deg;
-	color: black;
+	color: #231f20;
 }
 
 #indexBody{
@@ -31,16 +31,18 @@ body{
 
 #acuteTitle{
 	width: 70vw;
-	margin-top: 10vh;
+	margin-top: 6vh;
 	margin-bottom: 0;
 	font-size: 16vw;
 	font-family: sans-serif;
 	font-weight: lighter;
 	transition: 0.2s;
+	text-align: center;
+	color: #231f20;
 }
 
 #acuteTitle:hover{
-	text-shadow: 2px 2px black;
+	text-shadow: 2px 2px #231f20;
 }
 
 #navList{
@@ -68,8 +70,8 @@ body{
 }
 
 .navLink:hover{
-	color: black;
-	text-shadow: 1px 1px black;}
+	color: #231f20;
+	text-shadow: 1px 1px #231f20;}
 
 /*#nav1{top: 75vh; left: 20vw}
 #nav2{top: 35vh; left: 72vw}
@@ -96,5 +98,42 @@ body{
 }
 
 .accountCategoryLink:hover{
-	color: black;
-	text-shadow: 1px 1px black;}
+	color: #231f20;
+	text-shadow: 1px 1px #231f20;}
+
+#accountList{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#accountListLogo{
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	height: 10vh;
+}
+
+.accountEntry {
+	display: flex;
+	justify-content: center;
+	font-size: 6vh;
+	width: 50vw;
+	height: 8vh;
+	margin-bottom: 5vh;
+	align-items: center;
+	color: #444;
+	text-decoration: none;
+	font-family: sans-serif;
+	transition: 0.2s;
+}
+.accountEntry img{
+	margin-right: 2vw;
+	height: 100%;
+}
+.accountEntry p{
+	margin: 0;
+}
+.accountEntry:hover{
+	color: #231f20;
+	text-shadow: 0.5px 0.5px #231f20;
+}
