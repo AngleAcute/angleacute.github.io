@@ -2,6 +2,11 @@ body{
 	margin:0;
 }
 
+h1{font-family: sans-serif; font-weight: lighter;}
+h2{font-family: sans-serif; font-weight: lighter;}
+p{font-family: sans-serif; font-weight: lighter;}
+a{font-family: sans-serif; font-weight: lighter;}
+
 #menuButton{
 	position: fixed;
 	left: 2vw;
@@ -24,26 +29,24 @@ body{
 	justify-content: space-evenly;
 }
 
-#acuteHeader{
+.contentHeader{
 	display: flex;
 	justify-content: center;
 }
 
-#acuteTitle{
+.contentTitle{
 	width: 70vw;
 	margin-top: 6vh;
 	margin-bottom: 0;
-	font-size: 16vw;
-	font-family: sans-serif;
-	font-weight: lighter;
 	transition: 0.2s;
 	text-align: center;
 	color: #231f20;
+	font-size: 6vw
 }
+#acuteTitle{font-size: 16vw;}
+#acuteTitle:hover{text-shadow: 2px 2px #231f20;}
 
-#acuteTitle:hover{
-	text-shadow: 2px 2px #231f20;
-}
+#meTitle{font-size: 6vw}
 
 #navList{
 	display: flex;
@@ -64,7 +67,6 @@ body{
 	text-decoration: none;
 	font-family: sans-serif;
 	color: #444;
-	font-weight: lighter;
 	transition: 0.2s;
 	font-size: 8vw;
 }
@@ -125,13 +127,11 @@ body{
 	text-decoration: none;
 	font-family: sans-serif;
 	transition: 0.2s;
+	font-weight: normal;
 }
 .accountEntry img{
 	margin-right: 2vw;
 	height: 100%;
-}
-.accountEntry p{
-	margin: 0;
 }
 .accountEntry:hover{
 	color: #231f20;
