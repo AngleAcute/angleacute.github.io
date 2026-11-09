@@ -3,16 +3,16 @@ body{
 }
 
 h1{font-family: sans-serif; font-weight: lighter;}
-h2{font-family: sans-serif; font-weight: lighter; font-size: 2.5vw}
-p{font-family: sans-serif; font-weight: lighter; font-size: 1.5vw}
+h2{font-family: sans-serif; font-weight: lighter; font-size: 37px}
+p{font-family: sans-serif; font-weight: lighter; font-size: 22px}
 a{font-family: sans-serif; font-weight: lighter;}
-li{font-family: sans-serif; font-weight: lighter; font-size: 1.4vw; text-align: left !important; list-style: circle;}
+li{font-family: sans-serif; font-weight: lighter; font-size: 21px; text-align: left !important; list-style: circle;}
 hr{width: 40%}
 
 #menuButton{
 	position: fixed;
 	left: 2vw;
-	font-size: 5em;
+	font-size: 80px;
 	color: #444;
 	text-decoration: none;
 	margin: 0;
@@ -38,17 +38,16 @@ hr{width: 40%}
 }
 
 .contentTitle{
-	width: 70vw;
 	margin-top: 6vh;
 	margin-bottom: 20px;
 	transition: 0.2s;
 	text-align: center;
 	color: #231f20;
-	font-size: 6vw
+	font-size: 90px
 }
-#acuteTitle{font-size: 16vw; margin-bottom: 5vh; margin-top:0;}
+#acuteTitle{font-size: 240px; margin-bottom: 5vh; margin-top:0;}
 #acuteTitle:hover{text-shadow: 2px 2px #231f20;}
-#meTitle{font-size: 6vw}
+#meTitle{}
 
 .contentMain{
 	display: flex;
@@ -65,7 +64,7 @@ hr{width: 40%}
 
 #navList{
 	display: grid;
-	row-gap: 5vw;
+	row-gap: 10vh;
 	grid-template-columns: 35vw 35vw;
 	margin: 0;
 	list-style: none;
@@ -84,7 +83,7 @@ hr{width: 40%}
 	font-family: sans-serif;
 	color: #444;
 	transition: 0.2s;
-	font-size: 6vw;
+	font-size: 85px;
 }
 
 .navLink:hover{
@@ -104,13 +103,11 @@ hr{width: 40%}
 }
 
 .accountCategoryLink{
-	text-align: center;
 	text-decoration: none;
 	font-family: sans-serif;
 	color: #444;
-	font-weight: lighter;
 	transition: 0.2s;
-	font-size: 8vw;
+	font-size: 110px;
 	width: fit-content;
 	align-self: center;
 }
@@ -126,15 +123,15 @@ hr{width: 40%}
 }
 
 #accountListLogo{
-	margin-top: 5vh;
-	margin-bottom: 5vh;
-	height: 10vh;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	height: 120px;
 }
 
 .accountEntry {
 	display: flex;
 	justify-content: center;
-	font-size: 6vh;
+	font-size: 55px;
 	width: 50vw;
 	height: 8vh;
 	margin-bottom: 5vh;
@@ -148,8 +145,32 @@ hr{width: 40%}
 .accountEntry img{
 	margin-right: 2vw;
 	height: 100%;
+	padding-bottom: 8px;
 }
 .accountEntry:hover{
 	color: #231f20;
 	text-shadow: 0.5px 0.5px #231f20;
+}
+
+@media (max-width: 1000px){
+	#navList{grid-template-columns: auto; margin-bottom: 10vh}
+	.navLink{font-size: 70px}
+	#acuteTitle{font-size: 100px; margin-bottom: 5vh; margin-top:0;}
+	.contentSection{width: 90vw}
+	.contentTitle{font-size: 80px}
+	#menuButton{font-size: 70px}
+	.accountCategoryLink{font-size: 90px;}
+	.accountEntry {
+		font-size: 40px;
+		width: 100vw;
+		height: 8vh;
+	}
+	.accountEntry img {height: 90%; margin-right: 3vw}
+
+/*	h1{font-family: sans-serif; font-weight: lighter;}
+	h2{font-family: sans-serif; font-weight: lighter; font-size: 37px}
+	p{font-family: sans-serif; font-weight: lighter; font-size: 22px}
+	a{font-family: sans-serif; font-weight: lighter;}
+	li{font-family: sans-serif; font-weight: lighter; font-size: 21px; text-align: left !important; list-style: circle;}
+	hr{width: 40%}*/
 }
