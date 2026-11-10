@@ -1,10 +1,11 @@
-/*:root{
+:root{
 	--primaryColor:#231f20;
 	--unfocusedColor:#444;
-	--backgroundColor#fff;
-}*/
+	--backgroundColor:#fff;
+}
 
 body{
+	background-color: var(--backgroundColor);
 	margin:0;
 }
 
@@ -21,7 +22,7 @@ hr{width: 40%}
 	position: fixed;
 	left: 2vw;
 	font-size: 80px;
-	color: #444;
+	color: var(--unfocusedColor);
 	text-decoration: none;
 	margin: 0;
 	transition: 0.2s;
@@ -29,7 +30,7 @@ hr{width: 40%}
 
 #menuButton:hover{
 	rotate: 3deg;
-	color: #231f20;
+	color: var(--primaryColor);
 }
 
 #indexBody{
@@ -50,11 +51,11 @@ hr{width: 40%}
 	margin-bottom: 20px;
 	transition: 0.2s;
 	text-align: center;
-	color: #231f20;
+	color: var(--primaryColor);
 	font-size: 90px
 }
 #acuteTitle{font-size: 240px; margin-bottom: 5vh; margin-top:0;}
-#acuteTitle:hover{text-shadow: 2px 2px #231f20;}
+#acuteTitle:hover{text-shadow: 2px 2px var(--primaryColor);}
 #meTitle{}
 
 .contentMain{
@@ -74,11 +75,11 @@ hr{width: 40%}
 .projectEntry h2{margin: 0}
 .projectEntry hr{width: 100%; margin-bottom: 20px; margin-top: 15px}
 .projectEntry p{margin: 0;}
-.projectLink{display: flex; text-decoration: 0; color: #231f20; width: 55vw; align-items: center; margin-top: 60px; margin-bottom: 60px; transition: 0.5s}
+.projectLink{display: flex; text-decoration: 0; color: var(--primaryColor); width: 55vw; align-items: center; margin-top: 60px; margin-bottom: 60px; transition: 0.5s}
 .projectLink img{max-width: 120px; margin-right: 20px}
 
 .projectLink:hover{
-	text-shadow: 0.5px 0.5px #231f20;;
+	text-shadow: 0.5px 0.5px var(--primaryColor);
 }
 
 #slop{margin: 0;padding: 0;}
@@ -102,14 +103,14 @@ hr{width: 40%}
 .navLink{
 	text-decoration: none;
 	font-family: sans-serif;
-	color: #444;
+	color: var(--unfocusedColor);
 	transition: 0.2s;
 	font-size: 85px;
 }
 
 .navLink:hover{
-	color: #231f20;
-	text-shadow: 1px 1px #231f20;}
+	color: var(--primaryColor);
+	text-shadow: 1px 1px var(--primaryColor);}
 
 /*#nav1{top: 75vh; left: 20vw}
 #nav2{top: 35vh; left: 72vw}
@@ -126,7 +127,7 @@ hr{width: 40%}
 .accountCategoryLink{
 	text-decoration: none;
 	font-family: sans-serif;
-	color: #444;
+	color: var(--unfocusedColor);
 	transition: 0.2s;
 	font-size: 110px;
 	width: fit-content;
@@ -135,7 +136,7 @@ hr{width: 40%}
 
 .accountCategoryLink:hover{
 	color: #231f20;
-	text-shadow: 1px 1px #231f20;}
+	text-shadow: 1px 1px var(--primaryColor);}
 
 #accountList{
 	display: flex;
@@ -157,7 +158,7 @@ hr{width: 40%}
 	height: 8vh;
 	margin-bottom: 5vh;
 	align-items: center;
-	color: #444;
+	color: var(--unfocusedColor);
 	text-decoration: none;
 	font-family: sans-serif;
 	transition: 0.2s;
@@ -170,7 +171,7 @@ hr{width: 40%}
 }
 .accountEntry:hover{
 	color: #231f20;
-	text-shadow: 0.5px 0.5px #231f20;
+	text-shadow: 0.5px 0.5px var(--primaryColor);
 }
 
 .blockList{
@@ -180,7 +181,7 @@ hr{width: 40%}
 }
 .blockLink{ /* MEANINGLESS! */
 	text-decoration: none;
-	color: #231f20;
+	color: var(--primaryColor);
 }
 
 @media (max-width: 1000px){
