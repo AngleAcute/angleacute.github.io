@@ -157,7 +157,7 @@ hr{width: 40%}
 }
 
 .accountCategoryLink:hover{
-	color: #231f20;
+	color: var(--primaryColor);
 	text-shadow: 1px 1px var(--primaryColor);}
 
 #accountList{
