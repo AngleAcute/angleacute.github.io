@@ -11,26 +11,48 @@ body{
 
 
 
-h1{font-family: sans-serif; font-weight: lighter;}
-h2{font-family: sans-serif; font-weight: lighter; font-size: 37px}
-p{font-family: sans-serif; font-weight: lighter; font-size: 22px}
-a{font-family: sans-serif; font-weight: lighter;}
-li{font-family: sans-serif; font-weight: lighter; font-size: 21px; text-align: left !important; list-style: circle;}
+h1{font-family: sans-serif; font-weight: lighter; color: var(--primaryColor);}
+h2{font-family: sans-serif; font-weight: lighter; font-size: 37px; color: var(--primaryColor);}
+p{font-family: sans-serif; font-weight: lighter; font-size: 22px; color: var(--primaryColor);}
+a{font-family: sans-serif; font-weight: lighter; color: var(--primaryColor);}
+li{font-family: sans-serif; font-weight: lighter; font-size: 21px; text-align: left !important; list-style: circle; color: var(--primaryColor);}
 hr{width: 40%}
 
-#menuButton{
+#buttonContainer{
 	position: fixed;
 	left: 2vw;
+	top: 0;
 	font-size: 80px;
 	color: var(--unfocusedColor);
 	text-decoration: none;
 	margin: 0;
 	transition: 0.2s;
 }
-
+#menuButton{
+	font-size: 80px;
+	color: var(--unfocusedColor);
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	transition: 0.2s;
+}
 #menuButton:hover{
-	rotate: 3deg;
 	color: var(--primaryColor);
+	cursor: pointer;
+}
+#modeButton{
+	font-size: 80px;
+	background-color: transparent;
+	border: 0;
+	color: var(--unfocusedColor);
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	transition: 0.2s;
+}
+#modeButton:hover{
+	color: var(--primaryColor);
+	cursor: pointer;
 }
 
 #indexBody{
@@ -76,7 +98,7 @@ hr{width: 40%}
 .projectEntry hr{width: 100%; margin-bottom: 20px; margin-top: 15px}
 .projectEntry p{margin: 0;}
 .projectLink{display: flex; text-decoration: 0; color: var(--primaryColor); width: 55vw; align-items: center; margin-top: 60px; margin-bottom: 60px; transition: 0.5s}
-.projectLink img{max-width: 120px; margin-right: 20px}
+.projectLink img{max-width: 140px; margin-right: 20px; box-sizing: border-box; background-color: rgba(200, 200, 200, 0.6); padding: 15px; border-radius: 10px}
 
 .projectLink:hover{
 	text-shadow: 0.5px 0.5px var(--primaryColor);
@@ -170,7 +192,7 @@ hr{width: 40%}
 	padding-bottom: 8px;
 }
 .accountEntry:hover{
-	color: #231f20;
+	color: var(--primaryColor);
 	text-shadow: 0.5px 0.5px var(--primaryColor);
 }
 
