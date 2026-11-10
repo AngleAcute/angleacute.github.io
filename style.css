@@ -1,6 +1,14 @@
+/*:root{
+	--primaryColor:#231f20;
+	--unfocusedColor:#444;
+	--backgroundColor#fff;
+}*/
+
 body{
 	margin:0;
 }
+
+
 
 h1{font-family: sans-serif; font-weight: lighter;}
 h2{font-family: sans-serif; font-weight: lighter; font-size: 37px}
@@ -61,6 +69,19 @@ hr{width: 40%}
 	width: 55vw;
 	text-align: center;
 }
+
+.projectEntry{}
+.projectEntry h2{margin: 0}
+.projectEntry hr{width: 100%; margin-bottom: 20px; margin-top: 15px}
+.projectEntry p{margin: 0;}
+.projectLink{display: flex; text-decoration: 0; color: #231f20; width: 55vw; align-items: center; margin-top: 60px; margin-bottom: 60px; transition: 0.5s}
+.projectLink img{max-width: 120px; margin-right: 20px}
+
+.projectLink:hover{
+	text-shadow: 0.5px 0.5px #231f20;;
+}
+
+#slop{margin: 0;padding: 0;}
 
 #navList{
 	display: grid;
@@ -125,7 +146,7 @@ hr{width: 40%}
 #accountListLogo{
 	margin-top: 50px;
 	margin-bottom: 50px;
-	height: 120px;
+	height: 200px;
 }
 
 .accountEntry {
@@ -150,6 +171,16 @@ hr{width: 40%}
 .accountEntry:hover{
 	color: #231f20;
 	text-shadow: 0.5px 0.5px #231f20;
+}
+
+.blockList{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.blockLink{ /* MEANINGLESS! */
+	text-decoration: none;
+	color: #231f20;
 }
 
 @media (max-width: 1000px){
