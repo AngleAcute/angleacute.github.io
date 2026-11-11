@@ -2,6 +2,7 @@
 	--primaryColor:#231f20;
 	--unfocusedColor:#444;
 	--backgroundColor:#fff;
+	--themeFilter:invert(55%) sepia(0%) saturate(206%) hue-rotate(139deg) brightness(83%) contrast(85%);;
 }
 
 body{
@@ -19,6 +20,7 @@ li{font-family: sans-serif; font-weight: lighter; font-size: 21px; text-align: l
 hr{width: 40%}
 
 #buttonContainer{
+	display: flex;
 	position: fixed;
 	left: 2vw;
 	top: 0;
@@ -27,6 +29,7 @@ hr{width: 40%}
 	text-decoration: none;
 	margin: 0;
 	transition: 0.2s;
+	margin-top: 5px;
 }
 #menuButton{
 	font-size: 80px;
@@ -47,17 +50,22 @@ hr{width: 40%}
 	color: var(--unfocusedColor);
 	text-decoration: none;
 	margin: 0;
+	margin-left: 20px;
+	margin-top: 5px;
 	padding: 0;
 	transition: 0.2s;
 }
 #modeButton:hover{
 	color: var(--primaryColor);
+	cursor: default;
 }
 #modeButton:hover .dropdownTheme{
 	display: flex;
 }
 
 #dropdown{
+	position: fixed;
+	left: 15px;
 	display: none;
 	flex-direction: column;
 }
@@ -66,10 +74,12 @@ hr{width: 40%}
 	width: 300px;
 	border: 0;
 }
-.dropdownTheme{display: flex; transition: 0.5s; justify-content: space-between; align-items: center; background-color: transparent; cursor: pointer;}
-.dropdownTheme p {margin: 0; margin-right: 5px}
+.dropdownTheme{display: flex;; justify-content: space-between; align-items: center; background-color: transparent; cursor: pointer;}
+.dropdownTheme p {margin: 0; margin-right: 5px; color: var(--unfocusedColor); font-weight: normal; transition: 0.2s}
 .dropdownTheme div{ display:flex;}
-.dropdownTheme div div{border: 2px black solid; border-radius: 100%; width: 30px; height: 30px; margin: 5px}
+.dropdownTheme div div{transition: 0.2s; border: 2px var(--unfocusedColor) solid; border-radius: 100%; width: 30px; height: 30px; margin: 5px}
+.dropdownTheme:hover p {color: var(--primaryColor); text-shadow: 0.5px 0.5px var(--primaryColor);}
+.dropdownTheme:hover div div {border: 2px var(--primaryColor) solid; color: var(--primaryColor);}
 #primary{background-color: var(--primaryColor);}
 #unfocused{background-color: var(--unfocusedColor);}
 #background{background-color: var(--backgroundColor);}
@@ -86,10 +96,6 @@ hr{width: 40%}
 #banksTheme #unfocused{background-color: #f09}
 #banksTheme #background{background-color: #12f}
 
-
-#blacktest{
-	fill: darkred;
-}
 
 #indexBody{
 	display: flex;
@@ -226,6 +232,7 @@ hr{width: 40%}
 	margin-right: 2vw;
 	height: 100%;
 	padding-bottom: 8px;
+	filter: var(--themeFilter);
 }
 .accountEntry:hover{
 	color: var(--primaryColor);
