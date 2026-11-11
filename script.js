@@ -1,42 +1,37 @@
 var root = document.querySelector(':root');
 
-let dark = "x"
+const Themes = {
+	flashlight: [
+		{name: "--primaryColor", value: "#231f20"},
+		{name: "--unfocusedColor", value: "#444"},
+		{name: "--backgroundColor", value: "#fff"},
+		/*{name: "icons", value: "filter: invert(9%) sepia(8%) saturate(602%) hue-rotate(294deg) brightness(99%) contrast(91%);"*/
+	]
 
-if (localStorage.getItem("dark") == "true") {
-	dark = true
-	root.style.setProperty('--backgroundColor', '#231f20');
-	root.style.setProperty('--primaryColor', '#777');
-	root.style.setProperty('--unfocusedColor', '#555');
-	const loc = window.location.href
-	if (loc.endsWith("social.html") || loc.endsWith("game.html")){
-		$(".accountEntry img").each(function(){this.src=this.src.replace("logosLight","logosDark")});
-	}
-} else {
-	dark = false
-}
+	twilight: [
+		{name: "--primaryColor", value: "#777"},
+		{name: "--unfocusedColor", value: "#444"},
+		{name: "--backgroundColor", value: "#231f20"},
+		/*{name: "icons", value: "filter: invert(55%) sepia(0%) saturate(206%) hue-rotate(139deg) brightness(83%) contrast(85%);"*/
+	]
 
-document.getElementById("modeButton").addEventListener("click", ()=>{
-	const loc = window.location.href
-	if (dark == true) {
-		root.style.setProperty('--backgroundColor', '#fff');
-		root.style.setProperty('--primaryColor', '#231f20');
-		root.style.setProperty('--unfocusedColor', '#444');
-		if (loc.endsWith("social.html") || loc.endsWith("game.html")){
-			$(".accountEntry img").each(function(){this.src=this.src.replace("logosLight","logosDark")});
-		}
+	ThomasBenjaminBanks: [
+		{name: "--primaryColor", value: "#40ce54"},
+		{name: "--unfocusedColor", value: "#f09"},
+		{name: "--backgroundColor", value: "#123"},
+		/*{name: "icons", value: "filter: invert(55%) sepia(0%) saturate(146%) hue-rotate(139deg) brightness(53%) contrast(35%);"*/
+	]
+};
 
-		document.getElementById("accountListLogo").src="../assets/acuteDark.png"
-		dark = false
-	} else {
-		root.style.setProperty('--backgroundColor', '#231f20');
-		root.style.setProperty('--primaryColor', '#777');
-		root.style.setProperty('--unfocusedColor', '#555');
-		if (loc.endsWith("social.html") || loc.endsWith("game.html")){
-			$(".accountEntry img").each(function(){this.src=this.src.replace("logosDark","logosLight")});
-		}
-		document.getElementById("accountListLogo").src="../assets/acuteLight.png"
-		dark = true
-	};
-	localStorage.setItem("dark", dark)
-});
+// root.style.setProperty('--backgroundColor', '#231f20');
+// root.style.setProperty('--primaryColor', '#777');
+// root.style.setProperty('--unfocusedColor', '#555');
+
+// $(".accountEntry img").each(function(){this.src=this.src.replace("logosLight","logosDark")});
+// loc.endsWith("social.html") || loc.endsWith("game.html")
+
+// localStorage.getItem("dark")
+
+// document.getElementById("modeButton").addEventListener("click", ()=>{})
+
 

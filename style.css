@@ -52,7 +52,43 @@ hr{width: 40%}
 }
 #modeButton:hover{
 	color: var(--primaryColor);
-	cursor: pointer;
+}
+#modeButton:hover .dropdownTheme{
+	display: flex;
+}
+
+#dropdown{
+	display: flex;
+	flex-direction: column;
+}
+#dropdown button{
+	height: 50px;
+	width: 300px;
+	border: 0;
+}
+.dropdownTheme{display: flex; transition: 0.5s; justify-content: space-between; align-items: center; background-color: transparent; cursor: pointer;}
+.dropdownTheme p {margin: 0; margin-right: 5px}
+.dropdownTheme div{ display:flex;}
+.dropdownTheme div div{border: 2px black solid; border-radius: 100%; width: 30px; height: 30px; margin: 5px}
+#primary{background-color: var(--primaryColor);}
+#unfocused{background-color: var(--unfocusedColor);}
+#background{background-color: var(--backgroundColor);}
+
+#flashlightTheme #primary{background-color: #231f20}
+#flashlightTheme #unfocused{background-color: #444}
+#flashlightTheme #background{background-color: #fff}
+
+#twilightTheme #primary{background-color: #777}
+#twilightTheme #unfocused{background-color: #444}
+#twilightTheme #background{background-color: #231f20}
+
+#banksTheme #primary{background-color: #40ce54}
+#banksTheme #unfocused{background-color: #f09}
+#banksTheme #background{background-color: #12f}
+
+
+#blacktest{
+	fill: darkred;
 }
 
 #indexBody{
