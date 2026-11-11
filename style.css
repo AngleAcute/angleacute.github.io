@@ -58,7 +58,7 @@ hr{width: 40%}
 }
 
 #dropdown{
-	display: flex;
+	display: none;
 	flex-direction: column;
 }
 #dropdown button{
