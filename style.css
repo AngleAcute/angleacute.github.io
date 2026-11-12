@@ -3,10 +3,28 @@
 	--unfocusedColor:#444;
 	--backgroundColor:#fff;
 	--themeFilter:invert(55%) sepia(0%) saturate(206%) hue-rotate(139deg) brightness(83%) contrast(85%);
-	--themeShadow:none;
-	--globalFilter:none;
 }
 
+:root:has(#flashlight:checked){
+	--primaryColor:#231f20;
+	--unfocusedColor:#444;
+	--backgroundColor:#fff;
+	--themeFilter:invert(9%) sepia(8%) saturate(602%) hue-rotate(294deg) brightness(99%) contrast(91%);
+}
+
+:root:has(#grayzone:checked){
+	--primaryColor:#777;
+	--unfocusedColor:#444;
+	--backgroundColor:#231f20;
+	--themeFilter:invert(55%) sepia(0%) saturate(206%) hue-rotate(139deg) brightness(83%) contrast(85%);
+}
+
+:root:has(#thomas:checked){
+	--primaryColor:#40ce54;
+	--unfocusedColor:#f09;
+	--backgroundColor:#123;
+	--themeFilter:invert(60%) sepia(99%) saturate(365%) hue-rotate(76deg) brightness(95%) contrast(83%) drop-shadow(0 0 1px #40ce54);
+}
 
 body{
 	background-color: var(--backgroundColor);
@@ -22,28 +40,105 @@ a{font-family: sans-serif; font-weight: lighter; color: var(--primaryColor);}
 li{font-family: sans-serif; font-weight: lighter; font-size: 21px; text-align: left !important; list-style: circle; color: var(--primaryColor);}
 hr{width: 40%}
 
-#buttonContainer{
-	display: flex;
-	margin: 40px;
-	margin-top: 0;
-	font-size: 100px;
-	gap: 20px;
+#menuButtons{
 	position: fixed;
-	color: var(--unfocusedColor);
-	transition: 0.2s;
+	display: flex;
+	top: 0;
+	left: 0;
+	margin-left: 30px;
+	gap: 25px;
+
+	> section{
+		display: flex;
+		flex-direction: column;
+		font-size: 80px;
+		margin-top: 6px;
+		color: var(--unfocusedColor);
+		transition: 0.2s;
+
+		&:hover{
+			cursor: pointer;
+			color: var(--primaryColor);
+			> menu{
+				display: flex;
+			}
+		}
+
+		> menu{
+			display: none;
+			flex-direction: column;
+			gap: 20px;
+			position: fixed;
+			padding:0;
+			margin: 0;
+			width: 300px;
+			top: 100px;
+			left: 30px;
+
+			> li{
+				list-style: none;
+
+				> #flashlight + label > div{
+					#primary{background-color: #231f20}
+					#unfocused{background-color: #444}
+					#background{background-color: #fff}}
+				> #grayzone + label > div{
+					#primary{background-color: #777}
+					#unfocused{background-color: #444}
+					#background{background-color: #231f20}}
+				> #thomas + label > div{
+					#primary{background-color: #40ce54}
+					#unfocused{background-color: #f09}
+					#background{background-color: #12f}}
+
+				> input{display: none;}
+				> label{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					font-weight: normal;
+					gap: 10px;
+					color: var(--unfocusedColor);
+					transition: 0.2s;
+
+					&:hover{
+						cursor: pointer; 
+						color: var(--primaryColor);
+						text-shadow: 0.5px 0.5px var(--primaryColor);
+						> div div{border-color: var(--primaryColor)}
+					}
+
+					> hr{width: 100%;}
+					> div{display: flex; gap: 10px}
+					> div div{
+						border: 2px var(--unfocusedColor) solid; 
+						border-radius: 100%; 
+						width: 30px; 
+						height: 30px;
+						transition: 0.2s;
+					}
+				}
+			}
+		}
+	}
+
+	>a{
+		font-size: 80px; 
+		text-decoration: none; 
+		transition: 0.2s;
+		color: var(--unfocusedColor);
+
+		&:hover{
+			color: var(--primaryColor)
+		}
+	}
 }
 
-#dropdownButton summary::marker {content: ""}
-#dropdownButton{padding-top: 7px; transition: 0.2s;}
-#dropdownButton:hover{color: var(--primaryColor); cursor: pointer}
+.dropdownTheme div div{transition: 0.2s; border: 2px var(--unfocusedColor) solid; border-radius: 100%; width: 30px; height: 30px; margin: 5px}
 
-#backButton{text-decoration: none; transition: 0.2s; color: var(--unfocusedColor);}
-#backButton:hover{color: var(--primaryColor);}
-
-
-#flashlightTheme #primary{background-color: #231f20}
-#flashlightTheme #unfocused{background-color: #444}
-#flashlightTheme #background{background-color: #fff}
+#flashlight #primary{background-color: #231f20}
+#flashlight #unfocused{background-color: #444}
+#flashlight #background{background-color: #fff}
 
 #grayzoneTheme #primary{background-color: #777}
 #grayzoneTheme #unfocused{background-color: #444}
@@ -70,12 +165,11 @@ hr{width: 40%}
 .contentTitle{
 	margin-top: 6vh;
 	margin-bottom: 20px;
-	transition: 0.2s;
 	text-align: center;
 	color: var(--primaryColor);
 	font-size: 90px
 }
-#acuteTitle{font-size: 240px; margin-bottom: 5vh; margin-top:0;}
+#acuteTitle{font-size: 240px; margin-bottom: 5vh; margin-top:0; transition: 0.2s}
 #acuteTitle:hover{text-shadow: 2px 2px var(--primaryColor);}
 #meTitle{}
 
@@ -185,6 +279,7 @@ hr{width: 40%}
 .accountEntry img{
 	margin-right: 2vw;
 	height: 100%;
+	min-height: 50px;
 	margin-bottom: 8px;
 	filter: var(--themeFilter);
 }

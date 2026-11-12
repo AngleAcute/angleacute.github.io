@@ -7,80 +7,53 @@
 	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>   <!-- IDEA: Make header "My socials" and change the list names to the platforms -->
-	<section id="buttonContainer">
-		<a id="backButton" href="accounts.html">←</a>
-		<details id="dropdownButton">
-			<summary>☀︎</summary>
-			<!-- Dropdown Menu -->
-			<section>
-				<!-- First theme -->
-				<button id="flashlightTheme">
-					<span>Flashlight</span>
-					<hr>
-					<div>
-						<div id="background">1</div>
-						<div id="unfocused">2</div>
-						<div id="primary">3</div>
-					</div>
-				</button>
-				<!-- Second theme -->
-				<button id="grayzoneTheme">
-					<span>Grayzone</span>
-					<hr>
-					<div>
-						<div id="background">1</div>
-						<div id="unfocused">2</div>
-						<div id="primary">3</div>
-					</div>
-				</button>
-				<!-- Third theme -->
-				<button id="banksTheme">
-					<span>Thomas</span>
-					<hr>
-					<div>
-						<div id="background">1</div>
-						<div id="unfocused">2</div>
-						<div id="primary">3</div>
-					</div>
-				</button>
-			</section>
-		</details>
+	
+	<section id="menuButtons">
+		<a href="accounts.html">←</a>
+		<section>
+			☀︎
+			<menu>
+				<li>
+					<input type="radio" id="flashlight" name="themeRadio">
+					<label for="flashlight">
+						Flashlight
+						<hr>
+						<div>
+							<div id="background"></div>
+							<div id="unfocused"></div>
+							<div id="primary"></div>
+						</div>
+					</label>
+				</li>
+				<li>
+					<input type="radio" id="grayzone" name="themeRadio">
+					<label for="grayzone">
+						Grayzone
+						<hr>
+						<div>
+							<div id="background"></div>
+							<div id="unfocused"></div>
+							<div id="primary"></div>
+						</div>
+					</label>
+				</li>
+				<li>
+					<input type="radio" id="thomas" name="themeRadio">
+					<label for="thomas">
+						Thomas
+						<hr>
+						<div>
+							<div id="background"></div>
+							<div id="unfocused"></div>
+							<div id="primary"></div>
+						</div>
+					</label>
+				</li>
+			</menu>
+		</section>
 	</section>
-	<!-- <section id="">
-		<a id="" href="accounts.html">←</a>
-		<summary id="">☀︎
-			<section id="">
-				<button class="dropdownTheme" id="flashlightTheme">
-					<p>Flashlight</p>
-					<hr>
-					<div>
-						<div id="primary"></div>
-						<div id="unfocused"></div>
-						<div id="background"></div>
-					</div>
-				</button>
-				<button class="dropdownTheme" id="grayzoneTheme">
-					<p>Grayzone</p>
-					<hr>
-					<div>
-						<div id="primary"></div>
-						<div id="unfocused"></div>
-						<div id="background"></div>
-					</div>
-				</button>
-				<button class="dropdownTheme" id="banksTheme">
-					<p>Thomas</p>
-					<hr>
-					<div>
-						<div id="primary"></div>
-						<div id="unfocused"></div>
-						<div id="background"></div>
-					</div>
-				</button>
-			</section>
-		</summary>
-		
-	</section> -->
+
+
 	<main id="accountList">
 		<img id="accountListLogo" src="../assets/acute.png" alt="Diagram of an acute angle">
 		<a class="accountEntry" href="https://discord.com/users/513399060703739914"><img src="../assets/logos/discordLogo.png" alt="Discord">AngleAcute</a>
