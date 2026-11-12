@@ -1,8 +1,8 @@
 :root{
-	--primaryColor:#231f20;
-	--unfocusedColor:#444;
-	--backgroundColor:#fff;
-	--themeFilter:invert(55%) sepia(0%) saturate(206%) hue-rotate(139deg) brightness(83%) contrast(85%);
+	--primaryColor:#000;
+	--unfocusedColor:#000;
+	--backgroundColor:#000;
+	--themeFilter:none;
 }
 
 :root:has(#flashlight:checked){
