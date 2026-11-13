@@ -1,4 +1,4 @@
-document.getElementById("flashlight").addEventListener("click",()=>{});
+
 
 document.querySelectorAll("input").forEach(inp => {
     inp.addEventListener("change", ()=>{
@@ -6,14 +6,12 @@ document.querySelectorAll("input").forEach(inp => {
     })
 })
 
-if (localStorage.getItem("theme") !== undefined) {
+if (localStorage.getItem("theme") !== null) {
 	document.getElementById(localStorage.getItem("theme")).checked = true
 	
-}
+} else document.getElementById("flashlight").checked = true;
 
-if (localStorage.getItem("theme") !== undefined) {
-    theme = localStorage.getItem("theme");
-} else theme = "flashlight";
+
 
 // var root = document.querySelector(':root');
 // var newStyle = root.style.setProperty
