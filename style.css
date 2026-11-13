@@ -294,6 +294,10 @@ hr{width: 40%}
 	padding: 0;
 }
 
+@view-transition {
+	navigation: auto;
+}
+
 @media (max-width: 1000px){
 	#navList{grid-template-columns: auto; row-gap: 2vh}
 	.navLink{font-size: 70px}
