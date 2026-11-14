@@ -3,6 +3,7 @@
 	--unfocusedColor:#000;
 	--backgroundColor:#000;
 	--themeFilter:none;
+	--themeFont:sans-serif;
 }
 
 :root:has(#flashlight:checked){
@@ -10,6 +11,7 @@
 	--unfocusedColor:#444;
 	--backgroundColor:#fff;
 	--themeFilter:invert(9%) sepia(8%) saturate(602%) hue-rotate(294deg) brightness(99%) contrast(91%);
+	--themeFont:sans-serif;
 }
 
 :root:has(#grayzone:checked){
@@ -17,6 +19,7 @@
 	--unfocusedColor:#444;
 	--backgroundColor:#231f20;
 	--themeFilter:invert(55%) sepia(0%) saturate(206%) hue-rotate(139deg) brightness(83%) contrast(85%);
+	--themeFont:sans-serif;
 }
 
 :root:has(#thomas:checked){
@@ -24,19 +27,26 @@
 	--unfocusedColor:#f09;
 	--backgroundColor:#123;
 	--themeFilter:invert(60%) sepia(99%) saturate(365%) hue-rotate(76deg) brightness(95%) contrast(83%) drop-shadow(0 0 1px #40ce54);
+	--themeFont:pixelFont;
+}
+
+@font-face{
+	font-family: pixelFont;
+	src: url(assets/pixels.woff2);
 }
 
 body{
 	background-color: var(--backgroundColor);
 	margin:0;
+	font-family: var(--themeFont);
 }
 
 
-h1{font-family: sans-serif; font-weight: lighter; color: var(--primaryColor);}
-h2{font-family: sans-serif; font-weight: lighter; font-size: 37px; color: var(--primaryColor);}
-p{font-family: sans-serif; font-weight: lighter; font-size: 22px; color: var(--primaryColor);}
-a{font-family: sans-serif; font-weight: lighter; color: var(--primaryColor);}
-li{font-family: sans-serif; font-weight: lighter; font-size: 21px; text-align: left !important; list-style: circle; color: var(--primaryColor);}
+h1{color: var(--primaryColor);}
+h2{font-size: 37px; color: var(--primaryColor);}
+p{font-size: 22px; color: var(--primaryColor);}
+a{color: var(--primaryColor);}
+li{font-size: 21px; text-align: left !important; list-style: circle; color: var(--primaryColor);}
 hr{width: 40%; color: var(--primaryColor);}
 
 #menuButtons{
@@ -102,7 +112,6 @@ hr{width: 40%; color: var(--primaryColor);}
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
-					font-weight: normal;
 					gap: 10px;
 					transition: 0.2s;
 
@@ -182,7 +191,7 @@ hr{width: 40%; color: var(--primaryColor);}
 #acuteTitle:hover{text-shadow: 2px 2px var(--primaryColor);}
 #meTitle{}
 
-
+#acuteBanner{margin-bottom: 10vh; filter: var(--themeFilter);}
 
 .contentMain{
 	display: flex;
@@ -229,7 +238,6 @@ hr{width: 40%; color: var(--primaryColor);}
 
 .navLink{
 	text-decoration: none;
-	font-family: sans-serif;
 	color: var(--unfocusedColor);
 	transition: 0.2s;
 	font-size: 85px;
@@ -249,7 +257,6 @@ hr{width: 40%; color: var(--primaryColor);}
 
 .accountCategoryLink{
 	text-decoration: none;
-	font-family: sans-serif;
 	color: var(--unfocusedColor);
 	transition: 0.2s;
 	font-size: 110px;
@@ -284,9 +291,7 @@ hr{width: 40%; color: var(--primaryColor);}
 	align-items: center;
 	color: var(--unfocusedColor);
 	text-decoration: none;
-	font-family: sans-serif;
 	transition: 0.2s;
-	font-weight: normal;
 }
 .accountEntry img{
 	margin-right: 2vw;
