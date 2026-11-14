@@ -4,6 +4,7 @@
 	--backgroundColor:#000;
 	--themeFilter:none;
 	--themeFont:sans-serif;
+	--themeList:circle;
 }
 
 :root:has(#flashlight:checked){
@@ -11,7 +12,8 @@
 	--unfocusedColor:#444;
 	--backgroundColor:#fff;
 	--themeFilter:invert(9%) sepia(8%) saturate(602%) hue-rotate(294deg) brightness(99%) contrast(91%);
-	--themeFont:sans-serif;
+	--themeFont: courier, sans-serif;
+	--themeList:circle;
 }
 
 :root:has(#grayzone:checked){
@@ -20,6 +22,7 @@
 	--backgroundColor:#231f20;
 	--themeFilter:invert(55%) sepia(0%) saturate(206%) hue-rotate(139deg) brightness(83%) contrast(85%);
 	--themeFont:sans-serif;
+	--themeList:disc;
 }
 
 :root:has(#thomas:checked){
@@ -28,6 +31,7 @@
 	--backgroundColor:#123;
 	--themeFilter:invert(60%) sepia(99%) saturate(365%) hue-rotate(76deg) brightness(95%) contrast(83%) drop-shadow(0 0 1px #40ce54);
 	--themeFont:pixelFont;
+	--themeList:square;
 }
 
 @font-face{
@@ -42,11 +46,11 @@ body{
 }
 
 
-h1{color: var(--primaryColor);}
-h2{font-size: 37px; color: var(--primaryColor);}
+h1{color: var(--primaryColor); font-weight: normal;}
+h2{font-size: 37px; color: var(--primaryColor); font-weight: normal;}
 p{font-size: 22px; color: var(--primaryColor);}
 a{color: var(--primaryColor);}
-li{font-size: 21px; text-align: left !important; list-style: circle; color: var(--primaryColor);}
+li{font-size: 21px; text-align: left !important; list-style: var(--themeList); color: var(--primaryColor);}
 hr{width: 40%; color: var(--primaryColor);}
 
 #menuButtons{
