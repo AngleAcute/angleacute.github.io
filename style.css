@@ -38,7 +38,7 @@ h2{font-family: sans-serif; font-weight: lighter; font-size: 37px; color: var(--
 p{font-family: sans-serif; font-weight: lighter; font-size: 22px; color: var(--primaryColor);}
 a{font-family: sans-serif; font-weight: lighter; color: var(--primaryColor);}
 li{font-family: sans-serif; font-weight: lighter; font-size: 21px; text-align: left !important; list-style: circle; color: var(--primaryColor);}
-hr{width: 40%}
+hr{width: 40%; color: var(--primaryColor);}
 
 #menuButtons{
 	position: fixed;
@@ -46,7 +46,9 @@ hr{width: 40%}
 	top: 0;
 	left: 0;
 	margin-left: 30px;
-	gap: 25px;
+	margin-top: 30px;
+	gap: 30px;
+	height: 70px;
 
 	> section{
 		display: flex;
@@ -61,7 +63,13 @@ hr{width: 40%}
 			color: var(--primaryColor);
 			> menu{
 				display: flex;
+				
 			}
+		}
+
+		> img{
+			max-height: 100%;
+			filter: var(--themeFilter);
 		}
 
 		> menu{
@@ -72,8 +80,9 @@ hr{width: 40%}
 			padding:0;
 			margin: 0;
 			width: 300px;
-			top: 100px;
+			top: 80px;
 			left: 30px;
+			padding-top: 50px;
 
 			> li{
 				list-style: none;
@@ -130,6 +139,10 @@ hr{width: 40%}
 
 		&:hover{
 			color: var(--primaryColor)
+		}
+		> img {
+			max-height: 100%;
+			filter: var(--themeFilter);
 		}
 	}
 }
