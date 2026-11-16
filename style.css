@@ -333,11 +333,4 @@ hr{width: 40%; color: var(--primaryColor);}
 		height: 8vh;
 	}
 	.accountEntry img {height: 90%; aspect-ratio: 1/1; margin-right: 3vw}
-
-/*	h1{font-family: sans-serif; font-weight: lighter;}
-	h2{font-family: sans-serif; font-weight: lighter; font-size: 37px}
-	p{font-family: sans-serif; font-weight: lighter; font-size: 22px}
-	a{font-family: sans-serif; font-weight: lighter;}
-	li{font-family: sans-serif; font-weight: lighter; font-size: 21px; text-align: left !important; list-style: circle;}
-	hr{width: 40%}*/
 }
