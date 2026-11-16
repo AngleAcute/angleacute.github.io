@@ -98,15 +98,15 @@ hr{width: 40%; color: var(--primaryColor);}
 			> li{
 				list-style: none;
 
-				> #flashlight + label > div{
+				> #flashlight + label > section{
 					#primary{background-color: #231f20}
 					#unfocused{background-color: #444}
 					#background{background-color: #fff}}
-				> #grayzone + label > div{
+				> #grayzone + label > section{
 					#primary{background-color: #777}
 					#unfocused{background-color: #444}
 					#background{background-color: #231f20}}
-				> #thomas + label > div{
+				> #thomas + label > section{
 					#primary{background-color: #40ce54}
 					#unfocused{background-color: #f09}
 					#background{background-color: #12f}}
@@ -123,17 +123,18 @@ hr{width: 40%; color: var(--primaryColor);}
 						cursor: pointer; 
 						color: var(--primaryColor);
 						text-shadow: 0.5px 0.5px var(--primaryColor);
-						> div div{border-color: var(--primaryColor)}
+						> section figure{border-color: var(--primaryColor)}
 					}
 
 					> hr{width: 100%;}
-					> div{display: flex; gap: 10px}
-					> div div{
+					> section{display: flex; gap: 10px}
+					> section figure{
 						border: 2px var(--unfocusedColor) solid; 
 						border-radius: 100%; 
 						width: 30px; 
 						height: 30px;
 						transition: 0.2s;
+						margin: 0;
 					}
 				}
 			}
@@ -156,7 +157,7 @@ hr{width: 40%; color: var(--primaryColor);}
 	}
 }
 
-.dropdownTheme div div{transition: 0.2s; border: 2px var(--unfocusedColor) solid; border-radius: 100%; width: 30px; height: 30px; margin: 5px}
+.dropdownTheme section figure{transition: 0.2s; border: 2px var(--unfocusedColor) solid; border-radius: 100%; width: 30px; height: 30px; margin: 5px}
 
 #flashlight #primary{background-color: #231f20}
 #flashlight #unfocused{background-color: #444}
@@ -301,7 +302,6 @@ hr{width: 40%; color: var(--primaryColor);}
 	margin-right: 2vw;
 	height: 100%;
 	min-height: 50px;
-	margin-bottom: 8px;
 	filter: var(--themeFilter);
 }
 .accountEntry:hover{
