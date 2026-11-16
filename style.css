@@ -171,6 +171,16 @@ hr{width: 40%; color: var(--primaryColor);}
 #banksTheme #unfocused{background-color: #f09}
 #banksTheme #background{background-color: #12f}
 
+#alert{
+	position: fixed;
+	bottom: 10px;
+	width: 100vw;
+	font-family: var(--themeFont);
+	text-align: center;
+	color: var(--primaryColor);
+	font-size: 20px;
+}
+
 
 #indexBody{
 	display: flex;
