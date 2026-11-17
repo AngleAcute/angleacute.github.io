@@ -118,15 +118,17 @@ hr{width: 40%; color: var(--primaryColor);}
 					align-items: center;
 					gap: 10px;
 					transition: 0.2s;
+					color: var(--unfocusedColor);
 
 					&:hover{
 						cursor: pointer; 
 						color: var(--primaryColor);
 						text-shadow: 0.5px 0.5px var(--primaryColor);
 						> section figure{border-color: var(--primaryColor)}
+						> hr{border-color: var(--primaryColor);}
 					}
 
-					> hr{width: 100%;}
+					> hr{width: 100%; border-color: var(--unfocusedColor); transition: inherit;}
 					> section{display: flex; gap: 10px}
 					> section figure{
 						border: 2px var(--unfocusedColor) solid; 
